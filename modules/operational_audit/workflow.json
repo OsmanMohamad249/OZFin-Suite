@@ -1,0 +1,77 @@
+{
+  "name": "Operational Audit",
+  "description": "Comprehensive operational efficiency and effectiveness audit",
+  "version": "1.0.0",
+  "steps": [
+    {
+      "id": "activity_selection",
+      "name": "Operational Scope Definition",
+      "description": "Define operational audit scope and objectives",
+      "required": true
+    },
+    {
+      "id": "company_info",
+      "name": "Business Process Analysis",
+      "description": "Understand business processes and operational environment",
+      "required": true
+    },
+    {
+      "id": "data_upload",
+      "name": "Operational Data Collection",
+      "description": "Collect operational data and performance metrics",
+      "required": true
+    },
+    {
+      "id": "account_mapping",
+      "name": "Process Mapping",
+      "description": "Map business processes and identify key controls",
+      "required": true
+    },
+    {
+      "id": "risk_analysis",
+      "name": "Operational Risk Assessment",
+      "description": "Assess operational risks and inefficiencies",
+      "required": true
+    },
+    {
+      "id": "audit_plan",
+      "name": "Operational Testing Plan",
+      "description": "Develop operational testing procedures",
+      "required": true
+    },
+    {
+      "id": "task_management",
+      "name": "Process Testing",
+      "description": "Execute operational testing procedures",
+      "required": true
+    },
+    {
+      "id": "reconciliation",
+      "name": "Performance Analysis",
+      "description": "Analyze operational performance and efficiency",
+      "required": true
+    },
+    {
+      "id": "reports",
+      "name": "Operational Reporting",
+      "description": "Generate operational audit reports and recommendations",
+      "required": true
+    }
+  ],
+  "focusAreas": [
+    "Process Efficiency",
+    "Resource Utilization",
+    "Performance Management",
+    "Quality Control",
+    "Cost Management",
+    "Technology Utilization"
+  ],
+  "keyMetrics": [
+    "Process Cycle Time",
+    "Resource Utilization Rate",
+    "Error Rates",
+    "Customer Satisfaction",
+    "Cost per Unit",
+    "Productivity Measures"
+  ]
+}

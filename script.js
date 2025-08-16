@@ -283,8 +283,12 @@ class AuditPulseApp {
         this.state.isLoading = false;
     }
     
-    // Render dashboard
+    // Render dashboard using dashboard component  
     async renderDashboard() {
+        if (typeof dashboard !== 'undefined') {
+            return dashboard.renderDashboard();
+        }
+        
         return `
             <div class="min-h-screen bg-gray-50">
                 <!-- Header -->
@@ -623,15 +627,19 @@ class AuditPulseApp {
         this.showNotification('Export functionality will be implemented', 'info');
     }
     
-    // Placeholder for workflow rendering
+    // Render workflow using workflowSteps component
     async renderWorkflow() {
+        if (typeof workflowSteps !== 'undefined') {
+            return workflowSteps.renderWorkflow(this.state.step);
+        }
+        
         return `
             <div class="min-h-screen bg-gray-50 p-6">
                 <div class="max-w-4xl mx-auto">
                     <h1 class="text-2xl font-bold text-gray-900 mb-6">Audit Workflow - Step ${this.state.step + 1}</h1>
                     <div class="card">
                         <div class="card-body">
-                            <p>Workflow implementation coming soon...</p>
+                            <p>Loading workflow components...</p>
                             <button class="btn btn-secondary mt-4" onclick="app.setState({currentView: 'dashboard'}); app.renderApp();">
                                 Back to Dashboard
                             </button>
@@ -642,15 +650,19 @@ class AuditPulseApp {
         `;
     }
     
-    // Placeholder for reports rendering
+    // Render reports using reports component
     async renderReports() {
+        if (typeof reports !== 'undefined') {
+            return reports.renderReports();
+        }
+        
         return `
             <div class="min-h-screen bg-gray-50 p-6">
                 <div class="max-w-4xl mx-auto">
                     <h1 class="text-2xl font-bold text-gray-900 mb-6">Reports</h1>
                     <div class="card">
                         <div class="card-body">
-                            <p>Reports implementation coming soon...</p>
+                            <p>Loading reports components...</p>
                             <button class="btn btn-secondary mt-4" onclick="app.setState({currentView: 'dashboard'}); app.renderApp();">
                                 Back to Dashboard
                             </button>

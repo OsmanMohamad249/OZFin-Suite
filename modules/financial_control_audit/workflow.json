@@ -1,0 +1,69 @@
+{
+  "name": "Financial Control Audit",
+  "description": "Focused audit of financial controls and procedures",
+  "version": "1.0.0",
+  "steps": [
+    {
+      "id": "activity_selection",
+      "name": "Financial Control Scope",
+      "description": "Define financial control audit scope",
+      "required": true
+    },
+    {
+      "id": "company_info",
+      "name": "Financial Process Documentation",
+      "description": "Document financial processes and controls",
+      "required": true
+    },
+    {
+      "id": "data_upload",
+      "name": "Financial Control Data",
+      "description": "Collect financial control evidence",
+      "required": true
+    },
+    {
+      "id": "account_mapping",
+      "name": "Financial Control Mapping",
+      "description": "Map financial controls to risks and processes",
+      "required": true
+    },
+    {
+      "id": "risk_analysis",
+      "name": "Financial Control Risk Assessment",
+      "description": "Assess financial control risks",
+      "required": true
+    },
+    {
+      "id": "audit_plan",
+      "name": "Financial Control Testing Plan",
+      "description": "Develop financial control testing procedures",
+      "required": true
+    },
+    {
+      "id": "task_management",
+      "name": "Financial Control Testing",
+      "description": "Execute financial control tests",
+      "required": true
+    },
+    {
+      "id": "reconciliation",
+      "name": "Control Deficiency Analysis",
+      "description": "Analyze control deficiencies and gaps",
+      "required": true
+    },
+    {
+      "id": "reports",
+      "name": "Financial Control Reporting",
+      "description": "Generate financial control audit reports",
+      "required": true
+    }
+  ],
+  "controlTypes": [
+    "Treasury Controls",
+    "Cash Management Controls",
+    "Segregation of Duties",
+    "Authorization Controls",
+    "Reconciliation Controls",
+    "Financial Reporting Controls"
+  ]
+}

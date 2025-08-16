@@ -1,0 +1,348 @@
+{
+  "name": "Compliance Audit",
+  "description": "Comprehensive regulatory compliance audit with focus on adherence to laws, regulations, and internal policies",
+  "version": "1.0.0",
+  "steps": [
+    {
+      "id": "activity_selection",
+      "name": "Compliance Scope Selection",
+      "description": "Define compliance audit scope and regulatory requirements",
+      "required": true,
+      "inputs": ["complianceFramework", "regulations", "auditScope"],
+      "outputs": ["complianceConfiguration"]
+    },
+    {
+      "id": "company_info",
+      "name": "Entity & Regulatory Profile",
+      "description": "Gather entity information and applicable regulatory environment",
+      "required": true,
+      "inputs": ["entityDetails", "jurisdiction", "applicableRegulations"],
+      "outputs": ["regulatoryProfile"]
+    },
+    {
+      "id": "data_upload",
+      "name": "Compliance Data Collection",
+      "description": "Import compliance-related documents and data",
+      "required": true,
+      "inputs": ["policies", "procedures", "complianceReports", "incidents"],
+      "outputs": ["complianceDataset"]
+    },
+    {
+      "id": "account_mapping",
+      "name": "Compliance Framework Mapping",
+      "description": "Map organizational controls to regulatory requirements",
+      "required": true,
+      "inputs": ["internalControls", "regulatoryRequirements"],
+      "outputs": ["complianceMappings"]
+    },
+    {
+      "id": "risk_analysis",
+      "name": "Compliance Risk Assessment",
+      "description": "Identify and assess compliance risks and violations",
+      "required": true,
+      "inputs": ["complianceData", "regulatoryChanges", "incidentHistory"],
+      "outputs": ["complianceRiskAssessment"]
+    },
+    {
+      "id": "audit_plan",
+      "name": "Compliance Audit Planning",
+      "description": "Develop comprehensive compliance testing plan",
+      "required": true,
+      "inputs": ["riskAssessment", "complianceObjectives", "resources"],
+      "outputs": ["complianceAuditPlan"]
+    },
+    {
+      "id": "task_management",
+      "name": "Compliance Testing Management",
+      "description": "Manage compliance testing tasks and documentation",
+      "required": true,
+      "inputs": ["auditPlan", "testingProcedures", "timeline"],
+      "outputs": ["testingProgress", "findings"]
+    },
+    {
+      "id": "reconciliation",
+      "name": "Compliance Verification",
+      "description": "Verify compliance status and validate corrective actions",
+      "required": true,
+      "inputs": ["testResults", "evidence", "managementResponses"],
+      "outputs": ["complianceStatus", "violations"]
+    },
+    {
+      "id": "reports",
+      "name": "Compliance Reporting",
+      "description": "Generate compliance reports and regulatory filings",
+      "required": true,
+      "inputs": ["complianceFindings", "violations", "recommendations"],
+      "outputs": ["complianceReport", "regulatoryFilings", "actionPlan"]
+    }
+  ],
+  "complianceFrameworks": [
+    {
+      "name": "SOX (Sarbanes-Oxley)",
+      "description": "US Federal law for corporate financial reporting and governance",
+      "sections": [
+        "Section 302 - Corporate Responsibility for Financial Reports",
+        "Section 404 - Management Assessment of Internal Controls",
+        "Section 409 - Real-time Disclosure",
+        "Section 802 - Criminal Penalties for Document Destruction"
+      ],
+      "applicability": "US Public Companies",
+      "keyControls": ["CEO/CFO Certifications", "Internal Control Documentation", "External Auditor Attestation"]
+    },
+    {
+      "name": "GDPR (General Data Protection Regulation)",
+      "description": "EU regulation for data protection and privacy",
+      "sections": [
+        "Lawful Basis for Processing",
+        "Data Subject Rights",
+        "Data Protection Impact Assessments",
+        "Breach Notification Requirements"
+      ],
+      "applicability": "EU and entities processing EU personal data",
+      "keyControls": ["Consent Management", "Data Mapping", "Privacy by Design", "Breach Response"]
+    },
+    {
+      "name": "HIPAA (Health Insurance Portability and Accountability Act)",
+      "description": "US healthcare data protection regulation",
+      "sections": [
+        "Privacy Rule",
+        "Security Rule",
+        "Breach Notification Rule",
+        "Enforcement Rule"
+      ],
+      "applicability": "US Healthcare entities and business associates",
+      "keyControls": ["PHI Safeguards", "Access Controls", "Audit Logs", "Business Associate Agreements"]
+    },
+    {
+      "name": "PCI DSS (Payment Card Industry Data Security Standard)",
+      "description": "Security standard for payment card data protection",
+      "requirements": [
+        "Install and maintain firewall configuration",
+        "Do not use vendor-supplied defaults for passwords",
+        "Protect stored cardholder data",
+        "Encrypt transmission of cardholder data",
+        "Use and regularly update anti-virus software",
+        "Develop and maintain secure systems"
+      ],
+      "applicability": "Entities processing payment card data",
+      "keyControls": ["Network Security", "Data Encryption", "Access Management", "Vulnerability Management"]
+    }
+  ],
+  "complianceRiskAreas": [
+    {
+      "area": "Data Privacy and Protection",
+      "riskLevel": "high",
+      "description": "Risk of personal data mishandling and privacy violations",
+      "regulations": ["GDPR", "CCPA", "HIPAA"],
+      "factors": [
+        "Data collection without consent",
+        "Inadequate data security measures",
+        "Lack of data subject rights processes",
+        "Cross-border data transfers"
+      ],
+      "testingProcedures": [
+        "Review data collection practices",
+        "Test consent mechanisms",
+        "Evaluate data security controls",
+        "Assess breach response procedures"
+      ]
+    },
+    {
+      "area": "Financial Reporting Compliance",
+      "riskLevel": "high",
+      "description": "Risk of non-compliance with financial reporting regulations",
+      "regulations": ["SOX", "SEC Rules", "Local GAAP"],
+      "factors": [
+        "Inadequate internal controls",
+        "Incomplete or inaccurate disclosures",
+        "Management override of controls",
+        "Insufficient documentation"
+      ],
+      "testingProcedures": [
+        "Test internal control design and effectiveness",
+        "Review financial statement disclosures",
+        "Evaluate management certifications",
+        "Assess documentation completeness"
+      ]
+    },
+    {
+      "area": "Anti-Money Laundering (AML)",
+      "riskLevel": "high",
+      "description": "Risk of inadequate AML controls and reporting",
+      "regulations": ["Bank Secrecy Act", "USA PATRIOT Act", "Local AML Laws"],
+      "factors": [
+        "Inadequate customer due diligence",
+        "Insufficient transaction monitoring",
+        "Delayed suspicious activity reporting",
+        "Inadequate training programs"
+      ],
+      "testingProcedures": [
+        "Test customer onboarding procedures",
+        "Review transaction monitoring systems",
+        "Evaluate SAR filing processes",
+        "Assess AML training effectiveness"
+      ]
+    },
+    {
+      "area": "Environmental Compliance",
+      "riskLevel": "medium",
+      "description": "Risk of environmental regulation violations",
+      "regulations": ["EPA Regulations", "Local Environmental Laws"],
+      "factors": [
+        "Inadequate environmental monitoring",
+        "Improper waste disposal",
+        "Missing environmental permits",
+        "Insufficient reporting"
+      ],
+      "testingProcedures": [
+        "Review environmental monitoring data",
+        "Test waste disposal procedures",
+        "Verify permit compliance",
+        "Evaluate environmental reporting"
+      ]
+    },
+    {
+      "area": "Employment and Labor Compliance",
+      "riskLevel": "medium",
+      "description": "Risk of employment law violations",
+      "regulations": ["FLSA", "FMLA", "EEO Laws", "Local Labor Laws"],
+      "factors": [
+        "Improper wage and hour practices",
+        "Inadequate leave administration",
+        "Discrimination and harassment issues",
+        "Safety regulation violations"
+      ],
+      "testingProcedures": [
+        "Test payroll calculations and records",
+        "Review leave policies and administration",
+        "Evaluate EEO compliance programs",
+        "Assess workplace safety procedures"
+      ]
+    },
+    {
+      "area": "Cybersecurity Compliance",
+      "riskLevel": "high",
+      "description": "Risk of cybersecurity regulation non-compliance",
+      "regulations": ["NIST Framework", "ISO 27001", "Industry-specific requirements"],
+      "factors": [
+        "Inadequate access controls",
+        "Insufficient vulnerability management",
+        "Weak incident response procedures",
+        "Inadequate security awareness training"
+      ],
+      "testingProcedures": [
+        "Test access control systems",
+        "Review vulnerability management processes",
+        "Evaluate incident response capabilities",
+        "Assess security training programs"
+      ]
+    }
+  ],
+  "complianceObjectives": [
+    {
+      "objective": "Regulatory Adherence",
+      "description": "Ensure full compliance with applicable laws and regulations"
+    },
+    {
+      "objective": "Policy Implementation",
+      "description": "Verify effective implementation of internal policies and procedures"
+    },
+    {
+      "objective": "Control Effectiveness",
+      "description": "Assess the design and operating effectiveness of compliance controls"
+    },
+    {
+      "objective": "Risk Mitigation",
+      "description": "Identify and mitigate compliance risks and vulnerabilities"
+    },
+    {
+      "objective": "Violation Detection",
+      "description": "Detect and report compliance violations and exceptions"
+    },
+    {
+      "objective": "Continuous Improvement",
+      "description": "Recommend improvements to compliance programs and processes"
+    }
+  ],
+  "testingMethodologies": [
+    {
+      "method": "Document Review",
+      "description": "Review policies, procedures, and compliance documentation",
+      "applicability": "All compliance areas",
+      "sampleSize": "Risk-based selection"
+    },
+    {
+      "method": "Interview and Inquiry",
+      "description": "Interview key personnel responsible for compliance functions",
+      "applicability": "All compliance areas",
+      "sampleSize": "Key personnel and process owners"
+    },
+    {
+      "method": "Observation",
+      "description": "Observe compliance processes and control activities",
+      "applicability": "Operational compliance areas",
+      "sampleSize": "Representative sample of activities"
+    },
+    {
+      "method": "Re-performance",
+      "description": "Re-perform compliance procedures to verify effectiveness",
+      "applicability": "Critical compliance controls",
+      "sampleSize": "Statistical or judgmental sample"
+    },
+    {
+      "method": "Data Analytics",
+      "description": "Analyze large datasets to identify compliance exceptions",
+      "applicability": "Transaction-heavy compliance areas",
+      "sampleSize": "Population or large sample analysis"
+    }
+  ],
+  "regulatoryReporting": [
+    {
+      "reportType": "Compliance Assessment Report",
+      "description": "Overall compliance status assessment",
+      "frequency": "Annual or as required",
+      "recipients": ["Management", "Board", "Regulators"]
+    },
+    {
+      "reportType": "Violation and Exception Report",
+      "description": "Identified violations and corrective actions",
+      "frequency": "Quarterly or as incidents occur",
+      "recipients": ["Management", "Compliance Officer", "Legal"]
+    },
+    {
+      "reportType": "Control Deficiency Report",
+      "description": "Internal control weaknesses and recommendations",
+      "frequency": "Upon completion of testing",
+      "recipients": ["Management", "Audit Committee"]
+    },
+    {
+      "reportType": "Regulatory Filing Status",
+      "description": "Status of required regulatory filings and submissions",
+      "frequency": "Ongoing monitoring",
+      "recipients": ["Management", "Compliance Officer"]
+    }
+  ],
+  "requiredSkills": [
+    "Regulatory knowledge and expertise",
+    "Risk assessment and management",
+    "Compliance program design",
+    "Legal and regulatory research",
+    "Data analysis and interpretation",
+    "Communication and reporting"
+  ],
+  "estimatedTimeframes": {
+    "planning": "1-2 weeks",
+    "fieldwork": "3-6 weeks",
+    "reporting": "1-2 weeks",
+    "total": "5-10 weeks"
+  },
+  "deliverables": [
+    "Compliance risk assessment",
+    "Compliance testing procedures",
+    "Compliance status report",
+    "Violation and exception report",
+    "Control deficiency report",
+    "Corrective action plan",
+    "Regulatory filing recommendations"
+  ]
+}

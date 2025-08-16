@@ -1,0 +1,284 @@
+{
+  "name": "Financial Audit",
+  "description": "Comprehensive financial statement audit with focus on material misstatement detection",
+  "version": "1.0.0",
+  "steps": [
+    {
+      "id": "activity_selection",
+      "name": "Activity Selection",
+      "description": "Select and configure financial audit parameters",
+      "required": true,
+      "inputs": ["auditType", "scope", "objectives"],
+      "outputs": ["auditConfiguration"]
+    },
+    {
+      "id": "company_info",
+      "name": "Company Information",
+      "description": "Gather client information and business understanding",
+      "required": true,
+      "inputs": ["companyDetails", "industry", "auditPeriod"],
+      "outputs": ["companyProfile"]
+    },
+    {
+      "id": "data_upload",
+      "name": "Data Upload",
+      "description": "Import financial data from various sources",
+      "required": true,
+      "inputs": ["trialBalance", "journalEntries", "financialStatements"],
+      "outputs": ["processedFinancialData"]
+    },
+    {
+      "id": "account_mapping",
+      "name": "Account Mapping",
+      "description": "Map client chart of accounts to standard reporting categories",
+      "required": true,
+      "inputs": ["chartOfAccounts", "mappingRules"],
+      "outputs": ["accountMappings"]
+    },
+    {
+      "id": "risk_analysis",
+      "name": "Risk Assessment",
+      "description": "Identify and assess audit risks using AI analysis",
+      "required": true,
+      "inputs": ["financialData", "industryBenchmarks", "priorYearData"],
+      "outputs": ["riskAssessment", "materialityThresholds"]
+    },
+    {
+      "id": "audit_plan",
+      "name": "Audit Planning",
+      "description": "Develop comprehensive audit plan and procedures",
+      "required": true,
+      "inputs": ["riskAssessment", "auditObjectives", "teamResources"],
+      "outputs": ["auditPlan", "testingProcedures"]
+    },
+    {
+      "id": "task_management",
+      "name": "Task Management",
+      "description": "Manage audit tasks and team assignments",
+      "required": true,
+      "inputs": ["auditPlan", "teamMembers", "timeline"],
+      "outputs": ["taskAssignments", "progressTracking"]
+    },
+    {
+      "id": "reconciliation",
+      "name": "Reconciliation & Testing",
+      "description": "Perform detailed testing and reconciliation procedures",
+      "required": true,
+      "inputs": ["auditEvidence", "testSamples", "clientRecords"],
+      "outputs": ["testResults", "exceptions", "workingPapers"]
+    },
+    {
+      "id": "reports",
+      "name": "Reporting",
+      "description": "Generate audit reports and management communications",
+      "required": true,
+      "inputs": ["auditFindings", "testResults", "managementResponses"],
+      "outputs": ["auditReport", "managementLetter", "financialStatements"]
+    }
+  ],
+  "riskAreas": [
+    {
+      "area": "Revenue Recognition",
+      "riskLevel": "high",
+      "description": "Risk of material misstatement in revenue recognition",
+      "factors": [
+        "Complex revenue contracts",
+        "Cut-off issues",
+        "Related party transactions",
+        "Performance obligations"
+      ],
+      "procedures": [
+        "Revenue cut-off testing",
+        "Contract review and analysis",
+        "Analytical procedures",
+        "Subsequent collections testing"
+      ]
+    },
+    {
+      "area": "Inventory Valuation",
+      "riskLevel": "high",
+      "description": "Risk related to inventory existence, completeness and valuation",
+      "factors": [
+        "Obsolescence risk",
+        "Physical count accuracy",
+        "Valuation methodology",
+        "Lower of cost or market"
+      ],
+      "procedures": [
+        "Physical inventory observation",
+        "Inventory roll-forward procedures",
+        "Obsolescence analysis",
+        "Inventory pricing tests"
+      ]
+    },
+    {
+      "area": "Accounts Receivable",
+      "riskLevel": "medium",
+      "description": "Risk of overstatement or collectibility issues",
+      "factors": [
+        "Bad debt estimation",
+        "Customer concentrations",
+        "Related party receivables",
+        "Credit terms and policies"
+      ],
+      "procedures": [
+        "Aging analysis review",
+        "Confirmation procedures",
+        "Subsequent collections testing",
+        "Credit memo review"
+      ]
+    },
+    {
+      "area": "Fixed Assets",
+      "riskLevel": "medium",
+      "description": "Risk related to existence, valuation and depreciation",
+      "factors": [
+        "Asset additions and disposals",
+        "Depreciation calculations",
+        "Impairment indicators",
+        "Asset classification"
+      ],
+      "procedures": [
+        "Physical asset verification",
+        "Depreciation recalculation",
+        "Impairment testing",
+        "Capital vs. expense classification"
+      ]
+    },
+    {
+      "area": "Debt and Borrowings",
+      "riskLevel": "medium",
+      "description": "Risk related to debt completeness and classification",
+      "factors": [
+        "Debt covenant compliance",
+        "Current vs. long-term classification",
+        "Interest calculations",
+        "Related party debt"
+      ],
+      "procedures": [
+        "Debt confirmation procedures",
+        "Covenant compliance testing",
+        "Interest calculation verification",
+        "Debt agreement review"
+      ]
+    },
+    {
+      "area": "Management Override",
+      "riskLevel": "high",
+      "description": "Risk of management override of internal controls",
+      "factors": [
+        "Unusual journal entries",
+        "Management estimates",
+        "Related party transactions",
+        "Accounting policy changes"
+      ],
+      "procedures": [
+        "Journal entry testing",
+        "Management estimate review",
+        "Related party identification",
+        "Accounting policy analysis"
+      ]
+    }
+  ],
+  "materialityBenchmarks": [
+    {
+      "name": "Net Income",
+      "percentage": 5,
+      "description": "5% of net income (for profitable entities)"
+    },
+    {
+      "name": "Revenue",
+      "percentage": 0.5,
+      "description": "0.5% of total revenue"
+    },
+    {
+      "name": "Total Assets",
+      "percentage": 0.5,
+      "description": "0.5% of total assets"
+    },
+    {
+      "name": "Gross Profit",
+      "percentage": 5,
+      "description": "5% of gross profit"
+    }
+  ],
+  "auditObjectives": [
+    {
+      "assertion": "Existence/Occurrence",
+      "description": "Assets, liabilities, and transactions actually exist and occurred"
+    },
+    {
+      "assertion": "Completeness",
+      "description": "All transactions and accounts are included in financial statements"
+    },
+    {
+      "assertion": "Accuracy/Valuation",
+      "description": "Amounts are recorded at appropriate values"
+    },
+    {
+      "assertion": "Cut-off",
+      "description": "Transactions are recorded in the correct period"
+    },
+    {
+      "assertion": "Classification",
+      "description": "Items are properly classified in financial statements"
+    },
+    {
+      "assertion": "Rights and Obligations",
+      "description": "Entity has rights to assets and obligations for liabilities"
+    },
+    {
+      "assertion": "Presentation and Disclosure",
+      "description": "Items are properly presented and disclosed"
+    }
+  ],
+  "sampleProcedures": [
+    {
+      "category": "Revenue",
+      "procedure": "Select a sample of sales transactions and verify supporting documentation",
+      "sampleSize": "25-60 items based on risk assessment",
+      "timing": "Interim and year-end"
+    },
+    {
+      "category": "Expenses",
+      "procedure": "Test expense accruals and cut-off for accuracy and completeness",
+      "sampleSize": "30-50 items",
+      "timing": "Year-end"
+    },
+    {
+      "category": "Cash",
+      "procedure": "Bank confirmations and bank reconciliation review",
+      "sampleSize": "All material bank accounts",
+      "timing": "Year-end"
+    },
+    {
+      "category": "Receivables",
+      "procedure": "Customer confirmation procedures and aged trial balance review",
+      "sampleSize": "Statistical or judgmental sample",
+      "timing": "Year-end"
+    }
+  ],
+  "requiredSkills": [
+    "CPA or equivalent certification",
+    "Financial reporting standards knowledge (IFRS/GAAP)",
+    "Audit methodology and procedures",
+    "Risk assessment techniques",
+    "Sampling methodologies",
+    "IT audit considerations"
+  ],
+  "estimatedTimeframes": {
+    "planning": "2-3 weeks",
+    "fieldwork": "4-8 weeks",
+    "completion": "1-2 weeks",
+    "total": "7-13 weeks"
+  },
+  "deliverables": [
+    "Audit planning memorandum",
+    "Risk assessment documentation",
+    "Detailed audit procedures",
+    "Working paper files",
+    "Management letter",
+    "Auditor's report",
+    "Audited financial statements"
+  ]
+}

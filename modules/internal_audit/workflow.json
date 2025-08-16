@@ -1,0 +1,69 @@
+{
+  "name": "Internal Audit",
+  "description": "Comprehensive internal control and governance audit",
+  "version": "1.0.0",
+  "steps": [
+    {
+      "id": "activity_selection",
+      "name": "Internal Audit Scope",
+      "description": "Define internal audit scope and governance focus",
+      "required": true
+    },
+    {
+      "id": "company_info",
+      "name": "Governance Structure Analysis",
+      "description": "Analyze organizational structure and governance",
+      "required": true
+    },
+    {
+      "id": "data_upload",
+      "name": "Control Documentation",
+      "description": "Collect internal control documentation",
+      "required": true
+    },
+    {
+      "id": "account_mapping",
+      "name": "Control Framework Mapping",
+      "description": "Map controls to business processes and risks",
+      "required": true
+    },
+    {
+      "id": "risk_analysis",
+      "name": "Internal Risk Assessment",
+      "description": "Assess internal control risks and governance gaps",
+      "required": true
+    },
+    {
+      "id": "audit_plan",
+      "name": "Control Testing Plan",
+      "description": "Develop internal control testing procedures",
+      "required": true
+    },
+    {
+      "id": "task_management",
+      "name": "Control Testing",
+      "description": "Execute control testing and evaluation",
+      "required": true
+    },
+    {
+      "id": "reconciliation",
+      "name": "Control Effectiveness Review",
+      "description": "Evaluate control design and operating effectiveness",
+      "required": true
+    },
+    {
+      "id": "reports",
+      "name": "Internal Audit Reporting",
+      "description": "Generate internal audit reports and recommendations",
+      "required": true
+    }
+  ],
+  "controlAreas": [
+    "Financial Controls",
+    "Operational Controls",
+    "Compliance Controls",
+    "IT Controls",
+    "Risk Management",
+    "Governance Processes"
+  ]
+}
